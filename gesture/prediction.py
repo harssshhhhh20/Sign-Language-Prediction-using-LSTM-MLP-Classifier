@@ -22,7 +22,7 @@ mp_drawing = mp.solutions.drawing_utils
 
 
 def extract_keypoints(results):
-
+    print("testing auto comment")
     pose = np.array(
         [[res.x, res.y, res.z, res.visibility]
          for res in results.pose_landmarks.landmark]

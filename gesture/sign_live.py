@@ -16,17 +16,12 @@ mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
 
 
-# -------------------------------
-# FEATURE EXTRACTION
-# -------------------------------
-
 def extract_features(hand):
 
     coords = []
 
     wrist = hand.landmark[0]
 
-    # wrist-relative coordinates
     for lm in hand.landmark:
         coords.extend([
             lm.x - wrist.x,
@@ -34,7 +29,6 @@ def extract_features(hand):
             lm.z - wrist.z
         ])
 
-    # finger tip distances (helps C vs O)
     tips = [4,8,12,16,20]
 
     palm_x = np.mean([hand.landmark[i].x for i in [0,5,9,13,17]])
@@ -45,7 +39,6 @@ def extract_features(hand):
         dist = np.sqrt((lm.x-palm_x)**2 + (lm.y-palm_y)**2)
         coords.append(dist)
 
-    # thumb-index distance
     thumb = hand.landmark[4]
     index = hand.landmark[8]
 
@@ -59,9 +52,6 @@ def extract_features(hand):
     return np.array(coords)
 
 
-# -------------------------------
-# DATA COLLECTION
-# -------------------------------
 
 def collect_data():
 
@@ -128,9 +118,6 @@ def collect_data():
     return np.array(X), np.array(y)
 
 
-# -------------------------------
-# TRAIN MODEL
-# -------------------------------
 
 def train_model(X,y):
 
