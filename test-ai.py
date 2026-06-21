@@ -1,6 +1,2 @@
 print("hello")
 print("byebye")
-print("please")
-print("blehhh")
-print("webhook testing")
-print("blehhhh")
