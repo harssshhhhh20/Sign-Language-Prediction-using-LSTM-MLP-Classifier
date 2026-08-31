@@ -1,0 +1,38 @@
+# Sign Language Translator - pinned runtime stack.
+#
+# These bounds are not arbitrary. MediaPipe's legacy Solutions API
+# (mp.solutions.holistic / .hands) is what produces the 1662-d landmark
+# vector this project's data and models are built on, and it exists only in
+# the 0.10.x line - mediapipe 1.x ships the Tasks API only and removed
+# `mp.solutions` entirely. mediapipe 0.10.x in turn pins protobuf<5 and
+# numpy<2, which is why numpy and opencv are capped here too.
+#
+# Install with:
+#     python -m venv .venv
+#     .venv\Scripts\pip install -r requirements.txt      (Windows)
+#     .venv/bin/pip install -r requirements.txt          (macOS / Linux)
+
+numpy>=1.26,<2
+protobuf>=4.25.3,<5
+mediapipe==0.10.21
+opencv-python>=4.10,<5
+scikit-learn>=1.4,<2
+
+# --- optional -------------------------------------------------------------
+# Figures and plots.
+matplotlib>=3.8
+
+# Speech output for recognised sentences (press 's' in the live app).
+# pyttsx3>=2.90
+
+# Neural sequence models (GRU / LSTM / BiLSTM / 1D-CNN / Transformer).
+# The project works without TensorFlow: classical models over temporal
+# pyramid pooling are competitive on landmark data and, in this project's
+# own live-path benchmark, a random forest beat every neural candidate once
+# segmentation was taken into account.
+#
+# TensorFlow cannot coexist with the pinned stack above - current releases
+# require protobuf>=6 and numpy>=2, which mediapipe 0.10.x forbids. To use
+# the neural models, run them in a SEPARATE environment that has TensorFlow
+# and numpy>=2 but no mediapipe: train there, then copy the bundle across.
+# tensorflow-cpu>=2.16
