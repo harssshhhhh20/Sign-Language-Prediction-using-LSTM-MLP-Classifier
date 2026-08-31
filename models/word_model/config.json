@@ -1,0 +1,24 @@
+{
+  "labels": [
+    "hello",
+    "is",
+    "my",
+    "name"
+  ],
+  "feature_group": "pose_hands",
+  "normalisation": "body_centred",
+  "sequence_length": 30,
+  "dominant_hand": "right",
+  "model_name": "random_forest",
+  "model_kind": "classical",
+  "confidence_threshold": 0.55,
+  "margin_threshold": 0.0,
+  "smoothing_window": 7,
+  "min_agreement": 0.6,
+  "n_signers": 1,
+  "n_sequences": 120,
+  "trained_at": "2026-08-26T23:39:29",
+  "slr_version": "0.2.0",
+  "notes": "augment x6",
+  "idle_label": "__idle__"
+}

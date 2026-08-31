@@ -1,0 +1,139 @@
+# Sign vocabulary - one gloss per line, blank lines and # comments ignored.
+#
+# Ordered so that the first ~25 signs alone give a usable demo. Cut the file
+# at whatever depth you have time to record: every sign here costs roughly
+# 30 repetitions x 2 seconds = 1 minute of recording per signer, plus rest.
+#
+#   25 signs  ~35 min per signer   conversational demo
+#   50 signs  ~70 min per signer   solid system
+#  100 signs  ~2.5 h per signer    split across 2-3 sessions
+#
+# IMPORTANT: record the same vocabulary for every signer. A sign that only
+# one person contributed cannot be recognised for anyone else.
+
+# --- greetings and social (record these first) ---
+hello
+goodbye
+please
+thank-you
+sorry
+yes
+no
+help
+name
+nice
+meet
+
+# --- pronouns ---
+i-me
+you
+he-she
+we
+they
+my
+your
+
+# --- question words ---
+what
+where
+when
+who
+why
+how
+
+# --- core verbs ---
+want
+need
+have
+go
+come
+eat
+drink
+sleep
+work
+study
+learn
+understand
+know
+like
+love
+stop
+wait
+finish
+start
+give
+take
+make
+say
+see
+hear
+
+# --- states and adjectives ---
+good
+bad
+happy
+sad
+hungry
+thirsty
+tired
+sick
+hot
+cold
+big
+small
+more
+again
+same
+different
+
+# --- time ---
+today
+tomorrow
+yesterday
+now
+later
+morning
+afternoon
+night
+week
+year
+
+# --- people and places ---
+family
+mother
+father
+sister
+brother
+friend
+teacher
+student
+doctor
+school
+home
+hospital
+bathroom
+store
+
+# --- everyday objects ---
+water
+food
+money
+phone
+book
+car
+computer
+time
+door
+key
+
+# --- useful function signs ---
+and
+but
+because
+if
+not
+can
+cannot
+finished
+please-repeat
+slow-down

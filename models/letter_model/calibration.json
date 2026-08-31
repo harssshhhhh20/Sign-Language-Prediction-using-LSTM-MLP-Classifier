@@ -1,0 +1,290 @@
+{
+  "accuracy": 1.0,
+  "macro_f1": 1.0,
+  "per_class_f1": {},
+  "n_eval": 1250,
+  "protocol": "stratified_5fold",
+  "threshold_sweep": [
+    {
+      "confidence": 0.7,
+      "margin": 0.0,
+      "precision": 1.0,
+      "coverage": 0.9904,
+      "score": 0.9952,
+      "n_accepted": 1238
+    },
+    {
+      "confidence": 0.7,
+      "margin": 0.05,
+      "precision": 1.0,
+      "coverage": 0.9904,
+      "score": 0.9952,
+      "n_accepted": 1238
+    },
+    {
+      "confidence": 0.7,
+      "margin": 0.1,
+      "precision": 1.0,
+      "coverage": 0.9904,
+      "score": 0.9952,
+      "n_accepted": 1238
+    },
+    {
+      "confidence": 0.7,
+      "margin": 0.15,
+      "precision": 1.0,
+      "coverage": 0.9904,
+      "score": 0.9952,
+      "n_accepted": 1238
+    },
+    {
+      "confidence": 0.7,
+      "margin": 0.2,
+      "precision": 1.0,
+      "coverage": 0.9904,
+      "score": 0.9952,
+      "n_accepted": 1238
+    },
+    {
+      "confidence": 0.7,
+      "margin": 0.3,
+      "precision": 1.0,
+      "coverage": 0.9904,
+      "score": 0.9952,
+      "n_accepted": 1238
+    },
+    {
+      "confidence": 0.7,
+      "margin": 0.4,
+      "precision": 1.0,
+      "coverage": 0.9904,
+      "score": 0.9952,
+      "n_accepted": 1238
+    },
+    {
+      "confidence": 0.75,
+      "margin": 0.0,
+      "precision": 1.0,
+      "coverage": 0.9808,
+      "score": 0.9903,
+      "n_accepted": 1226
+    },
+    {
+      "confidence": 0.75,
+      "margin": 0.05,
+      "precision": 1.0,
+      "coverage": 0.9808,
+      "score": 0.9903,
+      "n_accepted": 1226
+    },
+    {
+      "confidence": 0.75,
+      "margin": 0.1,
+      "precision": 1.0,
+      "coverage": 0.9808,
+      "score": 0.9903,
+      "n_accepted": 1226
+    },
+    {
+      "confidence": 0.75,
+      "margin": 0.15,
+      "precision": 1.0,
+      "coverage": 0.9808,
+      "score": 0.9903,
+      "n_accepted": 1226
+    },
+    {
+      "confidence": 0.75,
+      "margin": 0.2,
+      "precision": 1.0,
+      "coverage": 0.9808,
+      "score": 0.9903,
+      "n_accepted": 1226
+    },
+    {
+      "confidence": 0.75,
+      "margin": 0.3,
+      "precision": 1.0,
+      "coverage": 0.9808,
+      "score": 0.9903,
+      "n_accepted": 1226
+    },
+    {
+      "confidence": 0.75,
+      "margin": 0.4,
+      "precision": 1.0,
+      "coverage": 0.9808,
+      "score": 0.9903,
+      "n_accepted": 1226
+    },
+    {
+      "confidence": 0.8,
+      "margin": 0.0,
+      "precision": 1.0,
+      "coverage": 0.9608,
+      "score": 0.98,
+      "n_accepted": 1201
+    },
+    {
+      "confidence": 0.8,
+      "margin": 0.05,
+      "precision": 1.0,
+      "coverage": 0.9608,
+      "score": 0.98,
+      "n_accepted": 1201
+    },
+    {
+      "confidence": 0.8,
+      "margin": 0.1,
+      "precision": 1.0,
+      "coverage": 0.9608,
+      "score": 0.98,
+      "n_accepted": 1201
+    },
+    {
+      "confidence": 0.8,
+      "margin": 0.15,
+      "precision": 1.0,
+      "coverage": 0.9608,
+      "score": 0.98,
+      "n_accepted": 1201
+    },
+    {
+      "confidence": 0.8,
+      "margin": 0.2,
+      "precision": 1.0,
+      "coverage": 0.9608,
+      "score": 0.98,
+      "n_accepted": 1201
+    },
+    {
+      "confidence": 0.8,
+      "margin": 0.3,
+      "precision": 1.0,
+      "coverage": 0.9608,
+      "score": 0.98,
+      "n_accepted": 1201
+    },
+    {
+      "confidence": 0.8,
+      "margin": 0.4,
+      "precision": 1.0,
+      "coverage": 0.9608,
+      "score": 0.98,
+      "n_accepted": 1201
+    },
+    {
+      "confidence": 0.85,
+      "margin": 0.0,
+      "precision": 1.0,
+      "coverage": 0.9328,
+      "score": 0.9652,
+      "n_accepted": 1166
+    },
+    {
+      "confidence": 0.85,
+      "margin": 0.05,
+      "precision": 1.0,
+      "coverage": 0.9328,
+      "score": 0.9652,
+      "n_accepted": 1166
+    },
+    {
+      "confidence": 0.85,
+      "margin": 0.1,
+      "precision": 1.0,
+      "coverage": 0.9328,
+      "score": 0.9652,
+      "n_accepted": 1166
+    },
+    {
+      "confidence": 0.85,
+      "margin": 0.15,
+      "precision": 1.0,
+      "coverage": 0.9328,
+      "score": 0.9652,
+      "n_accepted": 1166
+    },
+    {
+      "confidence": 0.85,
+      "margin": 0.2,
+      "precision": 1.0,
+      "coverage": 0.9328,
+      "score": 0.9652,
+      "n_accepted": 1166
+    },
+    {
+      "confidence": 0.85,
+      "margin": 0.3,
+      "precision": 1.0,
+      "coverage": 0.9328,
+      "score": 0.9652,
+      "n_accepted": 1166
+    },
+    {
+      "confidence": 0.85,
+      "margin": 0.4,
+      "precision": 1.0,
+      "coverage": 0.9328,
+      "score": 0.9652,
+      "n_accepted": 1166
+    },
+    {
+      "confidence": 0.9,
+      "margin": 0.0,
+      "precision": 1.0,
+      "coverage": 0.8824,
+      "score": 0.9375,
+      "n_accepted": 1103
+    },
+    {
+      "confidence": 0.9,
+      "margin": 0.05,
+      "precision": 1.0,
+      "coverage": 0.8824,
+      "score": 0.9375,
+      "n_accepted": 1103
+    },
+    {
+      "confidence": 0.9,
+      "margin": 0.1,
+      "precision": 1.0,
+      "coverage": 0.8824,
+      "score": 0.9375,
+      "n_accepted": 1103
+    },
+    {
+      "confidence": 0.9,
+      "margin": 0.15,
+      "precision": 1.0,
+      "coverage": 0.8824,
+      "score": 0.9375,
+      "n_accepted": 1103
+    },
+    {
+      "confidence": 0.9,
+      "margin": 0.2,
+      "precision": 1.0,
+      "coverage": 0.8824,
+      "score": 0.9375,
+      "n_accepted": 1103
+    },
+    {
+      "confidence": 0.9,
+      "margin": 0.3,
+      "precision": 1.0,
+      "coverage": 0.8824,
+      "score": 0.9375,
+      "n_accepted": 1103
+    },
+    {
+      "confidence": 0.9,
+      "margin": 0.4,
+      "precision": 1.0,
+      "coverage": 0.8824,
+      "score": 0.9375,
+      "n_accepted": 1103
+    }
+  ],
+  "confusable_pairs": []
+}
