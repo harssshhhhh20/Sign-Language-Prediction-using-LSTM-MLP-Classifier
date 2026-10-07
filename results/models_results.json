@@ -1,0 +1,9785 @@
+{
+  "preset": "models",
+  "config": {
+    "protocols": [
+      "block_disjoint"
+    ],
+    "feature_groups": [
+      "pose_hands"
+    ],
+    "normalisations": [
+      "body_centred"
+    ],
+    "models": [
+      "lstm_original",
+      "lstm",
+      "bilstm",
+      "gru",
+      "cnn1d",
+      "transformer",
+      "random_forest",
+      "extra_trees",
+      "svm_rbf",
+      "logreg",
+      "knn",
+      "mlp"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "augment": 0
+  },
+  "dataset": {
+    "name": "selfcollected-dynamic",
+    "modality": "dynamic",
+    "feature_layout": "holistic_1662",
+    "n_sequences": 120,
+    "n_classes": 4,
+    "n_signers": 1,
+    "n_sessions": 1,
+    "sequences_per_class": {
+      "hello": 30,
+      "is": 30,
+      "my": 30,
+      "name": 30
+    },
+    "sequences_per_signer": {
+      "S01": 120
+    },
+    "mean_hand_presence": 0.9816666666666668,
+    "class_balance_ratio": 1.0
+  },
+  "protocol_availability": {
+    "random": true,
+    "temporal_holdout": true,
+    "block_disjoint": true,
+    "session_independent": false,
+    "signer_independent": false
+  },
+  "protocols_skipped": [],
+  "elapsed_seconds": 1717.67,
+  "results": [
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.8333333333333334,
+      "balanced_accuracy": 0.8333333333333334,
+      "macro_f1": 0.8321678321678322,
+      "weighted_f1": 0.8321678321678321,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.6414652961213058,
+      "ci_high": 0.9332143199927109,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 104.15152020007372,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 0.9230769230769231,
+        "is": 0.7272727272727273,
+        "my": 0.7692307692307693,
+        "name": 0.9090909090909091
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          1,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857143,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 8.288766899844632,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8,
+        "my": 0.8571428571428571,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 6.769436700036749,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.958041958041958,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 29.294156999792904,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9230769230769231,
+        "my": 0.9090909090909091,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 31.90272430004552,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 23.64452280011028,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 41.559446999803185,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 14.876986100105569,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 36.370656199986115,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857143,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 0.9166666666666666,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 8.72950950008817,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8,
+        "my": 0.8571428571428571,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857143,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 34.313849500147626,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8,
+        "my": 0.8571428571428571,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857143,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 0.9166666666666666,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 16.0839941999875,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8,
+        "my": 0.8571428571428571,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 16.638471300015226,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 25.00160629977472,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 9.086524500045925,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 6.883536399807781,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 6.6138908001594245,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 6.810873700072989,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2100,
+      "size_bytes": 298686,
+      "fit_seconds": 0.4215832999907434,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2104,
+      "size_bytes": 299076,
+      "fit_seconds": 0.5218712000641972,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2108,
+      "size_bytes": 299464,
+      "fit_seconds": 0.40584230003878474,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2236,
+      "size_bytes": 311928,
+      "fit_seconds": 0.3198710000142455,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2196,
+      "size_bytes": 308040,
+      "fit_seconds": 0.30289309984073043,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2232,
+      "size_bytes": 311542,
+      "fit_seconds": 0.28499569999985397,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.875,
+      "balanced_accuracy": 0.875,
+      "macro_f1": 0.8772727272727273,
+      "weighted_f1": 0.8772727272727273,
+      "top2_accuracy": 0.9166666666666666,
+      "ci_low": 0.6899571185214243,
+      "ci_high": 0.9565574496068442,
+      "n_params": -1,
+      "size_bytes": 357991,
+      "fit_seconds": 0.011896000010892749,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 0.8,
+        "is": 1.0,
+        "my": 0.8,
+        "name": 0.9090909090909091
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.875,
+      "balanced_accuracy": 0.875,
+      "macro_f1": 0.8772727272727273,
+      "weighted_f1": 0.8772727272727273,
+      "top2_accuracy": 0.9166666666666666,
+      "ci_low": 0.6899571185214243,
+      "ci_high": 0.9565574496068442,
+      "n_params": -1,
+      "size_bytes": 357991,
+      "fit_seconds": 0.010527299949899316,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 0.8,
+        "is": 1.0,
+        "my": 0.8,
+        "name": 0.9090909090909091
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.875,
+      "balanced_accuracy": 0.875,
+      "macro_f1": 0.8772727272727273,
+      "weighted_f1": 0.8772727272727273,
+      "top2_accuracy": 0.9166666666666666,
+      "ci_low": 0.6899571185214243,
+      "ci_high": 0.9565574496068442,
+      "n_params": -1,
+      "size_bytes": 357991,
+      "fit_seconds": 0.010527200065553188,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 0.8,
+        "is": 1.0,
+        "my": 0.8,
+        "name": 0.9090909090909091
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          4,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.011329999892041087,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.010709800058975816,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.01082600001245737,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.958041958041958,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.0067743000108748674,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9230769230769231,
+        "my": 0.9090909090909091,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.958041958041958,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.004890199983492494,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9230769230769231,
+        "my": 0.9090909090909091,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.958041958041958,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.00489949993789196,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9230769230769231,
+        "my": 0.9090909090909091,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 297860,
+      "size_bytes": 4798886,
+      "fit_seconds": 0.17396759986877441,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 0.9166666666666666,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 297860,
+      "size_bytes": 4798888,
+      "fit_seconds": 0.17318930011242628,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block0",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857144,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 297860,
+      "size_bytes": 4798888,
+      "fit_seconds": 0.356738000176847,
+      "held_out": "block 0 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8571428571428571,
+        "my": 0.8,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 10.028866700129583,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 8.14681850001216,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 6.6562854999210685,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 23.817778300028294,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 22.5414198001381,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 24.32884440012276,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 13.816067000152543,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 8.759482600027695,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 25.318653599824756,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 24.677606499986723,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 23.988426399882883,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 24.34068110003136,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 19.811523200012743,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 20.519380799960345,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 7.889595600077882,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 6.205422699917108,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 5.27619279990904,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 21.931180100189522,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2136,
+      "size_bytes": 302190,
+      "fit_seconds": 0.3663510999176651,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2136,
+      "size_bytes": 302196,
+      "fit_seconds": 0.37162370001897216,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2140,
+      "size_bytes": 302584,
+      "fit_seconds": 0.3691569999791682,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2694,
+      "size_bytes": 356313,
+      "fit_seconds": 0.27857049996964633,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2640,
+      "size_bytes": 351093,
+      "fit_seconds": 0.2919153000693768,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2640,
+      "size_bytes": 351100,
+      "fit_seconds": 0.2990032001398504,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 357991,
+      "fit_seconds": 0.013210299890488386,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 357991,
+      "fit_seconds": 0.012754099909216166,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 357991,
+      "fit_seconds": 0.012533499859273434,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.015114699956029654,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.014731900067999959,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.0142748998478055,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.006004000082612038,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.005645100027322769,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.00534130004234612,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798916,
+      "fit_seconds": 0.187746100127697,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798901,
+      "fit_seconds": 0.1844789998140186,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block1",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798901,
+      "fit_seconds": 0.17553509981371462,
+      "held_out": "block 1 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 12.87815840006806,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 7.18453780002892,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 10.771612900076434,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 27.940073600038886,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 26.151478399988264,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 10.63791189994663,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 33.00943610002287,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 34.81151430006139,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 30.04825280001387,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 23.420502400025725,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 23.312277700053528,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 23.29480200004764,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 19.342596299946308,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 19.313764499966055,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 7.3275560000911355,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 9.251382500166073,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 5.650537600042298,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 6.414004300022498,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2126,
+      "size_bytes": 301221,
+      "fit_seconds": 0.3650606998708099,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2132,
+      "size_bytes": 301806,
+      "fit_seconds": 0.36653689993545413,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2134,
+      "size_bytes": 301999,
+      "fit_seconds": 0.36830179998651147,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2628,
+      "size_bytes": 349947,
+      "fit_seconds": 0.280070599867031,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2662,
+      "size_bytes": 353229,
+      "fit_seconds": 0.3085330999456346,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2642,
+      "size_bytes": 351316,
+      "fit_seconds": 0.27938299998641014,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 349707,
+      "fit_seconds": 0.01212659990414977,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 349707,
+      "fit_seconds": 0.012466500047594309,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 349707,
+      "fit_seconds": 0.013104399899020791,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.01646110019646585,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.015138200018554926,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.014303799951449037,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.005840600002557039,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.005601799814030528,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.005468199960887432,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798933,
+      "fit_seconds": 0.23104119999334216,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798916,
+      "fit_seconds": 0.18517519999295473,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block2",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798901,
+      "fit_seconds": 0.1778947999700904,
+      "held_out": "block 2 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 6.290510799968615,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 9.693589700153098,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857143,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 10.440689099952579,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.8,
+        "my": 0.8571428571428571,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          4,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 22.081316399853677,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 21.896185900084674,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 9.16402789996937,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 24.406902799848467,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 16.260597999906167,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 8.428028700174764,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 24.643966499948874,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 23.80990370013751,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 23.770538700046018,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 19.92491069994867,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 19.681788200046867,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 15.499725600006059,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 8.10606350004673,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 8.077693599974737,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 9.277157499920577,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 0.9090909090909091,
+        "my": 0.9230769230769231,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2128,
+      "size_bytes": 301413,
+      "fit_seconds": 0.37085509998723865,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2128,
+      "size_bytes": 301413,
+      "fit_seconds": 0.3744465000927448,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2126,
+      "size_bytes": 301216,
+      "fit_seconds": 0.3980947001837194,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2528,
+      "size_bytes": 340281,
+      "fit_seconds": 0.3179933000355959,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2532,
+      "size_bytes": 340629,
+      "fit_seconds": 0.3533346001058817,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2516,
+      "size_bytes": 339118,
+      "fit_seconds": 0.4647517001722008,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 349707,
+      "fit_seconds": 0.014303000178188086,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 349707,
+      "fit_seconds": 0.014976799953728914,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 349707,
+      "fit_seconds": 0.014676199993118644,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.022836499847471714,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.019255500053986907,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.01791590009815991,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.00580639997497201,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.005657800007611513,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.006434599868953228,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798901,
+      "fit_seconds": 0.23504349985159934,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798901,
+      "fit_seconds": 0.2810211000032723,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block3",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 297860,
+      "size_bytes": 4798888,
+      "fit_seconds": 0.23205990018323064,
+      "held_out": "block 3 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 5.999420200008899,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 7.499600300099701,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "lstm_original",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 85364,
+      "size_bytes": 341456,
+      "fit_seconds": 6.4609450998250395,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 5.0026130001060665,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 6.171140900114551,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "lstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 84900,
+      "size_bytes": 339600,
+      "fit_seconds": 6.386579400161281,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 10.404541000025347,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 20.517491000005975,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "bilstm",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 121124,
+      "size_bytes": 484496,
+      "fit_seconds": 21.026581299956888,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 18.55786439985968,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 15.885901500005275,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "gru",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 64420,
+      "size_bytes": 257680,
+      "fit_seconds": 52.37297839997336,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 41.24881560006179,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 42.046385399997234,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "cnn1d",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 116228,
+      "size_bytes": 464912,
+      "fit_seconds": 39.678281700005755,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 13.02300320006907,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 12.121722700074315,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "transformer",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 50308,
+      "size_bytes": 201232,
+      "fit_seconds": 12.506215300178155,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2124,
+      "size_bytes": 301023,
+      "fit_seconds": 0.5408296000678092,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2126,
+      "size_bytes": 301221,
+      "fit_seconds": 0.7295459001325071,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "random_forest",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2116,
+      "size_bytes": 300244,
+      "fit_seconds": 0.7467302000150084,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 2526,
+      "size_bytes": 340089,
+      "fit_seconds": 0.5523461000993848,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 2534,
+      "size_bytes": 340836,
+      "fit_seconds": 0.6260807998478413,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "extra_trees",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2524,
+      "size_bytes": 339886,
+      "fit_seconds": 0.5414136999752373,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 382843,
+      "fit_seconds": 0.020334000000730157,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 382843,
+      "fit_seconds": 0.02482000016607344,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "svm_rbf",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 382843,
+      "fit_seconds": 0.02362379990518093,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.029468399938195944,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.032608999870717525,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "logreg",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 4132,
+      "size_bytes": 42427,
+      "fit_seconds": 0.028359000105410814,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.01052369992248714,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.009552399860695004,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "knn",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": -1,
+      "size_bytes": 340217,
+      "fit_seconds": 0.012333800084888935,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 297860,
+      "size_bytes": 4798901,
+      "fit_seconds": 0.49699530005455017,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 1,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 297860,
+      "size_bytes": 4798901,
+      "fit_seconds": 0.607037500012666,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "block_disjoint",
+      "fold_id": "block4",
+      "model": "mlp",
+      "feature_group": "pose_hands",
+      "normalisation": "body_centred",
+      "seed": 2,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 258,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 0.9583333333333334,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 297860,
+      "size_bytes": 4798888,
+      "fit_seconds": 0.6174800000153482,
+      "held_out": "block 4 of each class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    }
+  ]
+}

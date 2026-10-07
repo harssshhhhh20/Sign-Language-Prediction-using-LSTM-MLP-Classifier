@@ -80,19 +80,18 @@ python -m venv .venv
 ```
 
 ```bash
-.venv\Scripts\python run.py migrate
-```
-
-```bash
 .venv\Scripts\python run.py doctor
 ```
 
 On macOS / Linux use `.venv/bin/pip` and `.venv/bin/python`.
 
-`migrate` rebuilds the manifest-backed dataset in `data/` from the original
-`gesture/MP_Data` recordings. That dataset is derived, so it is not committed
-— regenerating it takes a couple of seconds and avoids carrying 24 MB of
-duplicate arrays in the repository.
+The dataset (`data/`), trained models (`models/`) and experiment results
+(`results/`) are all committed, so a fresh clone is ready to train, replay or
+run live immediately. If `data/` is ever lost, `run.py migrate` rebuilds the
+bundled dataset from the original `gesture/MP_Data` recordings.
+
+Contributor recordings land in `data/raw/<signer>_<session>/` and should be
+committed too, so everyone working on the project trains on the same data.
 
 The version pins in `requirements.txt` are load-bearing. MediaPipe's legacy
 `mp.solutions.holistic` API — which produces the 1662-dimensional landmark

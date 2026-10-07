@@ -8,17 +8,6 @@ __pycache__/
 *.pyo
 .pytest_cache/
 
-# Derived dataset - regenerate with `python run.py migrate`
-data/
-
-# Raw contributor recordings - shared out of band, not committed
-data/raw/
-data/raw_static/
-
-# Experiment output
-results/
-paper/
-
 # OS
 .DS_Store
 Thumbs.db

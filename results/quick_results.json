@@ -1,0 +1,487 @@
+{
+  "preset": "quick",
+  "config": {
+    "protocols": [
+      "random",
+      "temporal_holdout"
+    ],
+    "feature_groups": [
+      "full",
+      "hands"
+    ],
+    "normalisations": [
+      "body_centred"
+    ],
+    "models": [
+      "random_forest",
+      "logreg"
+    ],
+    "seeds": [
+      0
+    ],
+    "augment": 0
+  },
+  "dataset": {
+    "name": "selfcollected-dynamic",
+    "modality": "dynamic",
+    "feature_layout": "holistic_1662",
+    "n_sequences": 120,
+    "n_classes": 4,
+    "n_signers": 1,
+    "n_sessions": 1,
+    "sequences_per_class": {
+      "hello": 30,
+      "is": 30,
+      "my": 30,
+      "name": 30
+    },
+    "sequences_per_signer": {
+      "S01": 120
+    },
+    "mean_hand_presence": 0.9816666666666668,
+    "class_balance_ratio": 1.0
+  },
+  "protocol_availability": {
+    "random": true,
+    "temporal_holdout": true,
+    "block_disjoint": true,
+    "session_independent": false,
+    "signer_independent": false
+  },
+  "protocols_skipped": [],
+  "elapsed_seconds": 2.65,
+  "results": [
+    {
+      "protocol": "random",
+      "fold_id": "rep0",
+      "model": "random_forest",
+      "feature_group": "full",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 77,
+      "n_test": 24,
+      "n_features": 1662,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2174,
+      "size_bytes": 305889,
+      "fit_seconds": 0.5146141001023352,
+      "held_out": "(none)",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "random",
+      "fold_id": "rep0",
+      "model": "logreg",
+      "feature_group": "full",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 77,
+      "n_test": 24,
+      "n_features": 1662,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 26596,
+      "size_bytes": 267085,
+      "fit_seconds": 0.1367009999230504,
+      "held_out": "(none)",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "random",
+      "fold_id": "rep0",
+      "model": "random_forest",
+      "feature_group": "hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 77,
+      "n_test": 24,
+      "n_features": 126,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2238,
+      "size_bytes": 312129,
+      "fit_seconds": 0.44814329990185797,
+      "held_out": "(none)",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "random",
+      "fold_id": "rep0",
+      "model": "logreg",
+      "feature_group": "hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 77,
+      "n_test": 24,
+      "n_features": 126,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2020,
+      "size_bytes": 21307,
+      "fit_seconds": 0.022159500047564507,
+      "held_out": "(none)",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "temporal_holdout",
+      "fold_id": "tail",
+      "model": "random_forest",
+      "feature_group": "full",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 1662,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2146,
+      "size_bytes": 303165,
+      "fit_seconds": 0.46349480003118515,
+      "held_out": "last recordings per class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "temporal_holdout",
+      "fold_id": "tail",
+      "model": "logreg",
+      "feature_group": "full",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 1662,
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.9166666666666666,
+      "macro_f1": 0.9142857142857143,
+      "weighted_f1": 0.9142857142857143,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.741507847985494,
+      "ci_high": 0.9768416721570266,
+      "n_params": 26596,
+      "size_bytes": 267085,
+      "fit_seconds": 0.1262739000376314,
+      "held_out": "last recordings per class",
+      "per_class_f1": {
+        "hello": 0.8,
+        "is": 0.8571428571428571,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          4,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "temporal_holdout",
+      "fold_id": "tail",
+      "model": "random_forest",
+      "feature_group": "hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 126,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.8620194241710247,
+      "ci_high": 1.0,
+      "n_params": 2158,
+      "size_bytes": 304332,
+      "fit_seconds": 0.4619460999965668,
+      "held_out": "last recordings per class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 1.0,
+        "name": 1.0
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    },
+    {
+      "protocol": "temporal_holdout",
+      "fold_id": "tail",
+      "model": "logreg",
+      "feature_group": "hands",
+      "normalisation": "body_centred",
+      "seed": 0,
+      "n_train": 76,
+      "n_test": 24,
+      "n_features": 126,
+      "accuracy": 0.9583333333333334,
+      "balanced_accuracy": 0.9583333333333334,
+      "macro_f1": 0.9580419580419581,
+      "weighted_f1": 0.958041958041958,
+      "top2_accuracy": 1.0,
+      "ci_low": 0.7975777375115778,
+      "ci_high": 0.992606734645195,
+      "n_params": 2020,
+      "size_bytes": 21307,
+      "fit_seconds": 0.011894900118932128,
+      "held_out": "last recordings per class",
+      "per_class_f1": {
+        "hello": 1.0,
+        "is": 1.0,
+        "my": 0.9090909090909091,
+        "name": 0.9230769230769231
+      },
+      "confusion": [
+        [
+          6,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          6
+        ]
+      ]
+    }
+  ]
+}

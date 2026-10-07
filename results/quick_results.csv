@@ -1,0 +1,9 @@
+protocol,fold_id,model,feature_group,normalisation,seed,n_train,n_test,n_features,accuracy,balanced_accuracy,macro_f1,weighted_f1,top2_accuracy,ci_low,ci_high,n_params,size_bytes,fit_seconds,held_out
+random,rep0,random_forest,full,body_centred,0,77,24,1662,1.0,1.0,1.0,1.0,1.0,0.8620194241710247,1.0,2174,305889,0.5146141001023352,(none)
+random,rep0,logreg,full,body_centred,0,77,24,1662,1.0,1.0,1.0,1.0,1.0,0.8620194241710247,1.0,26596,267085,0.1367009999230504,(none)
+random,rep0,random_forest,hands,body_centred,0,77,24,126,1.0,1.0,1.0,1.0,1.0,0.8620194241710247,1.0,2238,312129,0.44814329990185797,(none)
+random,rep0,logreg,hands,body_centred,0,77,24,126,1.0,1.0,1.0,1.0,1.0,0.8620194241710247,1.0,2020,21307,0.022159500047564507,(none)
+temporal_holdout,tail,random_forest,full,body_centred,0,76,24,1662,1.0,1.0,1.0,1.0,1.0,0.8620194241710247,1.0,2146,303165,0.46349480003118515,last recordings per class
+temporal_holdout,tail,logreg,full,body_centred,0,76,24,1662,0.9166666666666666,0.9166666666666666,0.9142857142857143,0.9142857142857143,1.0,0.741507847985494,0.9768416721570266,26596,267085,0.1262739000376314,last recordings per class
+temporal_holdout,tail,random_forest,hands,body_centred,0,76,24,126,1.0,1.0,1.0,1.0,1.0,0.8620194241710247,1.0,2158,304332,0.4619460999965668,last recordings per class
+temporal_holdout,tail,logreg,hands,body_centred,0,76,24,126,0.9583333333333334,0.9583333333333334,0.9580419580419581,0.958041958041958,1.0,0.7975777375115778,0.992606734645195,2020,21307,0.011894900118932128,last recordings per class
