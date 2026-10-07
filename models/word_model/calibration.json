@@ -1,342 +1,408 @@
 {
-  "accuracy": 0.9916666666666666,
-  "macro_f1": 0.9916083916083916,
+  "accuracy": 0.7566964285714286,
+  "macro_f1": 0.7423541042291042,
   "per_class_f1": {
-    "hello": 1.0,
-    "is": 1.0,
-    "my": 0.9818,
-    "name": 0.9846
+    "__idle__": 1.0,
+    "goodbye": 0.3548,
+    "he-she": 0.7048,
+    "hello": 0.8743,
+    "help": 0.9333,
+    "i-me": 0.6514,
+    "meet": 0.8921,
+    "name": 0.9429,
+    "nice": 0.6974,
+    "no": 0.4588,
+    "please": 0.8929,
+    "sorry": 0.7225,
+    "thank-you": 0.7214,
+    "we": 0.9714,
+    "yes": 0.6711,
+    "you": 0.3886
   },
-  "n_eval": 120,
+  "n_eval": 271,
   "protocol": "block_disjoint",
   "threshold_sweep": [
     {
       "confidence": 0.55,
       "margin": 0.0,
-      "precision": 1.0,
-      "coverage": 0.9917,
-      "score": 0.9958,
-      "n_accepted": 119
+      "precision": 0.7811,
+      "coverage": 0.9173,
+      "score": 0.8438,
+      "n_accepted": 233
     },
     {
       "confidence": 0.55,
       "margin": 0.05,
-      "precision": 1.0,
-      "coverage": 0.9917,
-      "score": 0.9958,
-      "n_accepted": 119
+      "precision": 0.7811,
+      "coverage": 0.9173,
+      "score": 0.8438,
+      "n_accepted": 233
     },
     {
       "confidence": 0.55,
       "margin": 0.1,
-      "precision": 1.0,
-      "coverage": 0.9917,
-      "score": 0.9958,
-      "n_accepted": 119
+      "precision": 0.7811,
+      "coverage": 0.9173,
+      "score": 0.8438,
+      "n_accepted": 233
     },
     {
       "confidence": 0.55,
       "margin": 0.15,
-      "precision": 1.0,
-      "coverage": 0.9917,
-      "score": 0.9958,
-      "n_accepted": 119
+      "precision": 0.7802,
+      "coverage": 0.9134,
+      "score": 0.8415,
+      "n_accepted": 232
     },
     {
       "confidence": 0.55,
       "margin": 0.2,
-      "precision": 1.0,
-      "coverage": 0.9917,
-      "score": 0.9958,
-      "n_accepted": 119
+      "precision": 0.7832,
+      "coverage": 0.8898,
+      "score": 0.8331,
+      "n_accepted": 226
     },
     {
       "confidence": 0.55,
       "margin": 0.3,
-      "precision": 1.0,
-      "coverage": 0.9833,
-      "score": 0.9916,
-      "n_accepted": 118
+      "precision": 0.7883,
+      "coverage": 0.874,
+      "score": 0.8289,
+      "n_accepted": 222
     },
     {
       "confidence": 0.55,
       "margin": 0.4,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.789,
+      "coverage": 0.8583,
+      "score": 0.8222,
+      "n_accepted": 218
     },
     {
       "confidence": 0.6,
       "margin": 0.0,
-      "precision": 1.0,
-      "coverage": 0.9833,
-      "score": 0.9916,
-      "n_accepted": 118
+      "precision": 0.7892,
+      "coverage": 0.878,
+      "score": 0.8312,
+      "n_accepted": 223
     },
     {
       "confidence": 0.6,
       "margin": 0.05,
-      "precision": 1.0,
-      "coverage": 0.9833,
-      "score": 0.9916,
-      "n_accepted": 118
+      "precision": 0.7892,
+      "coverage": 0.878,
+      "score": 0.8312,
+      "n_accepted": 223
     },
     {
       "confidence": 0.6,
       "margin": 0.1,
-      "precision": 1.0,
-      "coverage": 0.9833,
-      "score": 0.9916,
-      "n_accepted": 118
+      "precision": 0.7892,
+      "coverage": 0.878,
+      "score": 0.8312,
+      "n_accepted": 223
     },
     {
       "confidence": 0.6,
       "margin": 0.15,
-      "precision": 1.0,
-      "coverage": 0.9833,
-      "score": 0.9916,
-      "n_accepted": 118
+      "precision": 0.7892,
+      "coverage": 0.878,
+      "score": 0.8312,
+      "n_accepted": 223
     },
     {
       "confidence": 0.6,
       "margin": 0.2,
-      "precision": 1.0,
-      "coverage": 0.9833,
-      "score": 0.9916,
-      "n_accepted": 118
+      "precision": 0.7892,
+      "coverage": 0.878,
+      "score": 0.8312,
+      "n_accepted": 223
     },
     {
       "confidence": 0.6,
       "margin": 0.3,
-      "precision": 1.0,
-      "coverage": 0.9833,
-      "score": 0.9916,
-      "n_accepted": 118
+      "precision": 0.7883,
+      "coverage": 0.874,
+      "score": 0.8289,
+      "n_accepted": 222
     },
     {
       "confidence": 0.6,
       "margin": 0.4,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.789,
+      "coverage": 0.8583,
+      "score": 0.8222,
+      "n_accepted": 218
     },
     {
       "confidence": 0.65,
       "margin": 0.0,
-      "precision": 1.0,
-      "coverage": 0.975,
-      "score": 0.9873,
-      "n_accepted": 117
+      "precision": 0.7919,
+      "coverage": 0.8701,
+      "score": 0.8291,
+      "n_accepted": 221
     },
     {
       "confidence": 0.65,
       "margin": 0.05,
-      "precision": 1.0,
-      "coverage": 0.975,
-      "score": 0.9873,
-      "n_accepted": 117
+      "precision": 0.7919,
+      "coverage": 0.8701,
+      "score": 0.8291,
+      "n_accepted": 221
     },
     {
       "confidence": 0.65,
       "margin": 0.1,
-      "precision": 1.0,
-      "coverage": 0.975,
-      "score": 0.9873,
-      "n_accepted": 117
+      "precision": 0.7919,
+      "coverage": 0.8701,
+      "score": 0.8291,
+      "n_accepted": 221
     },
     {
       "confidence": 0.65,
       "margin": 0.15,
-      "precision": 1.0,
-      "coverage": 0.975,
-      "score": 0.9873,
-      "n_accepted": 117
+      "precision": 0.7919,
+      "coverage": 0.8701,
+      "score": 0.8291,
+      "n_accepted": 221
     },
     {
       "confidence": 0.65,
       "margin": 0.2,
-      "precision": 1.0,
-      "coverage": 0.975,
-      "score": 0.9873,
-      "n_accepted": 117
+      "precision": 0.7919,
+      "coverage": 0.8701,
+      "score": 0.8291,
+      "n_accepted": 221
     },
     {
       "confidence": 0.65,
       "margin": 0.3,
-      "precision": 1.0,
-      "coverage": 0.975,
-      "score": 0.9873,
-      "n_accepted": 117
+      "precision": 0.7919,
+      "coverage": 0.8701,
+      "score": 0.8291,
+      "n_accepted": 221
     },
     {
       "confidence": 0.65,
       "margin": 0.4,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.7926,
+      "coverage": 0.8543,
+      "score": 0.8223,
+      "n_accepted": 217
     },
     {
       "confidence": 0.7,
       "margin": 0.0,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.8,
+      "coverage": 0.8465,
+      "score": 0.8226,
+      "n_accepted": 215
     },
     {
       "confidence": 0.7,
       "margin": 0.05,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.8,
+      "coverage": 0.8465,
+      "score": 0.8226,
+      "n_accepted": 215
     },
     {
       "confidence": 0.7,
       "margin": 0.1,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.8,
+      "coverage": 0.8465,
+      "score": 0.8226,
+      "n_accepted": 215
     },
     {
       "confidence": 0.7,
       "margin": 0.15,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.8,
+      "coverage": 0.8465,
+      "score": 0.8226,
+      "n_accepted": 215
     },
     {
       "confidence": 0.7,
       "margin": 0.2,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.8,
+      "coverage": 0.8465,
+      "score": 0.8226,
+      "n_accepted": 215
     },
     {
       "confidence": 0.7,
       "margin": 0.3,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.8,
+      "coverage": 0.8465,
+      "score": 0.8226,
+      "n_accepted": 215
     },
     {
       "confidence": 0.7,
       "margin": 0.4,
-      "precision": 1.0,
-      "coverage": 0.9667,
-      "score": 0.9831,
-      "n_accepted": 116
+      "precision": 0.8,
+      "coverage": 0.8465,
+      "score": 0.8226,
+      "n_accepted": 215
     },
     {
       "confidence": 0.75,
       "margin": 0.0,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8058,
+      "coverage": 0.811,
+      "score": 0.8084,
+      "n_accepted": 206
     },
     {
       "confidence": 0.75,
       "margin": 0.05,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8058,
+      "coverage": 0.811,
+      "score": 0.8084,
+      "n_accepted": 206
     },
     {
       "confidence": 0.75,
       "margin": 0.1,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8058,
+      "coverage": 0.811,
+      "score": 0.8084,
+      "n_accepted": 206
     },
     {
       "confidence": 0.75,
       "margin": 0.15,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8058,
+      "coverage": 0.811,
+      "score": 0.8084,
+      "n_accepted": 206
     },
     {
       "confidence": 0.75,
       "margin": 0.2,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8058,
+      "coverage": 0.811,
+      "score": 0.8084,
+      "n_accepted": 206
     },
     {
       "confidence": 0.75,
       "margin": 0.3,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8058,
+      "coverage": 0.811,
+      "score": 0.8084,
+      "n_accepted": 206
     },
     {
       "confidence": 0.75,
       "margin": 0.4,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8058,
+      "coverage": 0.811,
+      "score": 0.8084,
+      "n_accepted": 206
     },
     {
       "confidence": 0.8,
       "margin": 0.0,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8191,
+      "coverage": 0.7835,
+      "score": 0.8009,
+      "n_accepted": 199
     },
     {
       "confidence": 0.8,
       "margin": 0.05,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8191,
+      "coverage": 0.7835,
+      "score": 0.8009,
+      "n_accepted": 199
     },
     {
       "confidence": 0.8,
       "margin": 0.1,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8191,
+      "coverage": 0.7835,
+      "score": 0.8009,
+      "n_accepted": 199
     },
     {
       "confidence": 0.8,
       "margin": 0.15,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8191,
+      "coverage": 0.7835,
+      "score": 0.8009,
+      "n_accepted": 199
     },
     {
       "confidence": 0.8,
       "margin": 0.2,
-      "precision": 1.0,
-      "coverage": 0.95,
-      "score": 0.9744,
-      "n_accepted": 114
+      "precision": 0.8191,
+      "coverage": 0.7835,
+      "score": 0.8009,
+      "n_accepted": 199
     }
   ],
   "confusable_pairs": [
     {
-      "true": "my",
-      "predicted": "name",
-      "count": 1,
-      "rate": 0.033
+      "true": "goodbye",
+      "predicted": "no",
+      "count": 7,
+      "rate": 0.412
+    },
+    {
+      "true": "you",
+      "predicted": "nice",
+      "count": 5,
+      "rate": 0.294
+    },
+    {
+      "true": "i-me",
+      "predicted": "sorry",
+      "count": 4,
+      "rate": 0.235
+    },
+    {
+      "true": "no",
+      "predicted": "goodbye",
+      "count": 4,
+      "rate": 0.235
+    },
+    {
+      "true": "yes",
+      "predicted": "no",
+      "count": 4,
+      "rate": 0.235
+    },
+    {
+      "true": "he-she",
+      "predicted": "you",
+      "count": 3,
+      "rate": 0.176
+    },
+    {
+      "true": "you",
+      "predicted": "he-she",
+      "count": 3,
+      "rate": 0.176
+    },
+    {
+      "true": "goodbye",
+      "predicted": "nice",
+      "count": 2,
+      "rate": 0.118
+    },
+    {
+      "true": "hello",
+      "predicted": "yes",
+      "count": 2,
+      "rate": 0.118
+    },
+    {
+      "true": "help",
+      "predicted": "nice",
+      "count": 2,
+      "rate": 0.118
     }
   ]
 }
